@@ -1,4 +1,4 @@
-earning= input("Enter your number1 :").strip()
+earning= input("Enter your number :").strip()
 try:
     val1 = float(earning)
     if val1 < 0:
