@@ -1,4 +1,4 @@
-letter=input("Enter a letter :").strip()
+letter=input("Enter a String :").strip()
 vowel="a","e","i","u","y"
 for x in letter:
     if x in vowel:
