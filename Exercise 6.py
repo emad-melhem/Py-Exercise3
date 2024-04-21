@@ -23,4 +23,4 @@ try :
         """
 
 except ValueError as valueError:
-    print(valueError.args)
+    print(valueError.args[0])
