@@ -30,4 +30,4 @@ try:
         if x == 3:
             print("All is correct! You passed the test!")
 except ValueError:
-    print("That's not a Number!")
+    print("That's not a Number! \nThat is false, you failed the test.")
