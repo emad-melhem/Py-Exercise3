@@ -1,7 +1,5 @@
 import random
 
-resCountTest=0
-
 def _GetNewQuwstion():
     x=random.randint(1, 10)
     y=random.randint(1, 10)
@@ -25,8 +23,6 @@ x=0
 while x < 3:
     if not _GetNewQuwstion():
         break
-    else:
-        resCountTest +=1
     x+=1
     if x == 3:
         print("All is correct! You passed the test!")
