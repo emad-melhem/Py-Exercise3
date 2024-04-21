@@ -17,16 +17,16 @@ def _GetNewQuwstion():
         if retresult == x + y:
             print("That is correct!")
             result = True
+    if not result:
+        print("That is false, you failed the test.")
     return result
 
 x=0
 while x < 3:
     if not _GetNewQuwstion():
-        print("That is false, you failed the test.")
         break
     else:
         resCountTest +=1
     x+=1
-
-if resCountTest == 3:
-    print("All is correct! You passed the test!")
+    if x == 3:
+        print("All is correct! You passed the test!")
