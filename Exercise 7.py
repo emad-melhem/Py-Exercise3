@@ -3,19 +3,20 @@ import random
 def _GetNewQuwstion():
     x=random.randint(1, 10)
     y=random.randint(1, 10)
-    operator=random.choice(["*", "+"])
+    operator=random.choice(["*", "+","-"])
     result = False
+    retresult = int(input(f"What is {x} {operator} {y}?"))
+    
     if operator == "*":
-        retresult = int(input(f"What is {x} * {y}?"))
-        if retresult == x * y:
-            print("That is correct!")
-            result = True
+        result = retresult == x * y
+    elif operator == "+":
+        result = retresult == x + y
     else:
-        retresult = int(input(f"What is {x} + {y}?"))
-        if retresult == x + y:
-            print("That is correct!")
-            result = True
-    if not result:
+        result = retresult == x - y
+        
+    if result:
+        print("That is correct!")
+    else:
         print("That is false, you failed the test.")
     return result
 
