@@ -1,6 +1,6 @@
 letter= input("Enter a string with a maximum size of 5 :").strip()
 try :
-    if len(letter) < 1 and len(letter) > 5:
+    if len(letter) < 1 or len(letter) > 5:
         raise ValueError("The number of letters out of rang!")
     if len(letter) == 1:
         print(f"{letter} = {letter*6}.")
@@ -22,5 +22,5 @@ try :
         print(newletter)
         """
 
-except ValueError:
-    print("That's not a Number!")
+except ValueError as valueError:
+    print(valueError.args)
