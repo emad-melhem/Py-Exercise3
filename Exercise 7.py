@@ -20,10 +20,14 @@ def _GetNewQuwstion():
         print("That is false, you failed the test.")
     return result
 
-x=0
-while x < 3:
-    if not _GetNewQuwstion():
-        break
-    x+=1
-    if x == 3:
-        print("All is correct! You passed the test!")
+
+try:
+    x=0
+    while x < 3:
+        if not _GetNewQuwstion():
+            break
+        x+=1
+        if x == 3:
+            print("All is correct! You passed the test!")
+except ValueError:
+    print("That's not a Number!")
