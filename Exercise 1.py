@@ -3,9 +3,11 @@ vowel="a","e","i","u","y"
 for x in letter:
     if x.lower() in vowel:
         print(f"{x} is a vowel.")
-    elif x != " ":
+    elif x.isalpha():
         print(f"{x} is not a vowel.")
-    else:
+    elif x == " ":
         print(f"{x} is empty.")
+    else:
+        print(f"{x} is not letter.")
 if not letter:
     print("String is empty.")
